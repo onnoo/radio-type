@@ -1,0 +1,48 @@
+{
+  "manifest_version": 2,
+  "name": "radio-type",
+  "description": "Chrome extension for mapping radio click to keyboard input",
+  "version": "1.0.0",
+  "browser_action": {
+    "default_icon": "icon_off.png"
+  },
+  "commands": {
+    "select_1": {
+      "suggested_key": {
+        "default": "Ctrl+Left",
+        "mac": "Command+Left"
+      },
+      "description": "1번"
+    },
+    "select_2": {
+      "suggested_key": {
+        "default": "Ctrl+Right",
+        "mac": "Command+Right"
+      },
+      "description": "2번"
+    },
+    "select_3": {
+      "suggested_key": {
+        "default": "Ctrl+Down",
+        "mac": "Command+Down"
+      },
+      "description": "둘 다 같은 스타일"
+    },
+    "select_4": {
+      "suggested_key": {
+        "default": "Ctrl+Up",
+        "mac": "Command+Up"
+      },
+      "description": "둘 다 관련없음"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "<all_urls>"
+  ]
+}
